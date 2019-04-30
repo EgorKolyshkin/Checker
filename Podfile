@@ -6,5 +6,7 @@ target 'Checker' do
   use_frameworks!
 
   # Pods for Checker
-
+	pod 'RxSwift'
+	pod 'RxCocoa'
+	pod 'ReactorKit'
 end

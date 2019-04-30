@@ -12,6 +12,7 @@
 		742A2BA02278CF2D00256FC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 742A2B9E2278CF2D00256FC6 /* Main.storyboard */; };
 		742A2BA22278CF2F00256FC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 742A2BA12278CF2F00256FC6 /* Assets.xcassets */; };
 		742A2BA52278CF2F00256FC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 742A2BA32278CF2F00256FC6 /* LaunchScreen.storyboard */; };
+		811ED2500984F6E61749E425 /* Pods_Checker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05F5794820B0ABEDA08F964 /* Pods_Checker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		742A2BA12278CF2F00256FC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		742A2BA42278CF2F00256FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		742A2BA62278CF2F00256FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A748077520AB48950767D16 /* Pods-Checker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Checker/Pods-Checker.debug.xcconfig"; sourceTree = "<group>"; };
+		A81B44E6491CAB067C87FE98 /* Pods-Checker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Checker/Pods-Checker.release.xcconfig"; sourceTree = "<group>"; };
+		C05F5794820B0ABEDA08F964 /* Pods_Checker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Checker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				811ED2500984F6E61749E425 /* Pods_Checker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3014735D95C6229502303704 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C05F5794820B0ABEDA08F964 /* Pods_Checker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		742A2B8E2278CF2D00256FC6 = {
 			isa = PBXGroup;
 			children = (
 				742A2B992278CF2D00256FC6 /* Checker */,
 				742A2B982278CF2D00256FC6 /* Products */,
+				FE851B5A8A749E7E8088D0AF /* Pods */,
+				3014735D95C6229502303704 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = Checker;
 			sourceTree = "<group>";
 		};
+		FE851B5A8A749E7E8088D0AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A748077520AB48950767D16 /* Pods-Checker.debug.xcconfig */,
+				A81B44E6491CAB067C87FE98 /* Pods-Checker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 742A2BA92278CF2F00256FC6 /* Build configuration list for PBXNativeTarget "Checker" */;
 			buildPhases = (
+				FC971826DBD091669C9EA6D4 /* [CP] Check Pods Manifest.lock */,
 				742A2B932278CF2D00256FC6 /* Sources */,
 				742A2B942278CF2D00256FC6 /* Frameworks */,
 				742A2B952278CF2D00256FC6 /* Resources */,
+				A6A184C5E52E6357F25082E8 /* [CP] Embed Pods Frameworks */,
+				BCDBCA28C6F47D02E8786B9D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A6A184C5E52E6357F25082E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Checker/Pods-Checker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Checker/Pods-Checker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCDBCA28C6F47D02E8786B9D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Checker/Pods-Checker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC971826DBD091669C9EA6D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Checker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		742A2B932278CF2D00256FC6 /* Sources */ = {
@@ -280,15 +365,13 @@
 		};
 		742A2BAA2278CF2F00256FC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A748077520AB48950767D16 /* Pods-Checker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VS8C66WWGF;
 				INFOPLIST_FILE = Checker/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Qlink.Checker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -298,15 +381,13 @@
 		};
 		742A2BAB2278CF2F00256FC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A81B44E6491CAB067C87FE98 /* Pods-Checker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VS8C66WWGF;
 				INFOPLIST_FILE = Checker/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Qlink.Checker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
