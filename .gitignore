@@ -2,6 +2,8 @@
 build/
 DerivedData
 build.xcarchive
+Checker.xcodeproj/xcuserdata/
+Checker.xcworkspace/xcshareddata/
 ## Various settings
 *.pbxuser
 !default.pbxuser
